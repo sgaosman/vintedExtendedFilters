@@ -1,0 +1,27 @@
+{
+  "name": "vinted-seller-filters",
+  "description": "Catalog-style filters (price range, brand, size, condition, colour, material, pattern) on Vinted seller pages.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox --mv3",
+    "build": "wxt build",
+    "build:edge": "wxt build -b edge",
+    "build:firefox": "wxt build -b firefox --mv3",
+    "build:all": "npm run build && npm run build:edge && npm run build:firefox",
+    "zip": "wxt zip && wxt zip -b edge && wxt zip -b firefox --mv3",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "6.2.5",
+    "happy-dom": "20.14.4",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vitest": "4.1.11",
+    "wxt": "0.21.4"
+  }
+}
